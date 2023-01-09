@@ -1,0 +1,35 @@
+ <div>
+            <img src={country.flag} alt="" className="w-full h-48 object-cover rounded-md drop-shadow" />
+            </div>
+            <div>
+              <p>Country Name</p>
+              <p>Capital: </p>
+              <p>Population: </p>
+              <p>Region: </p>
+              <p>Sub-region: </p>
+
+              <div>
+                <p>Borders:</p>
+                <p>Border name</p>
+              </div>
+            </div>
+
+
+            <!-- arrow function syntax -->
+            What i want to do: if something doesnt exist, "does not exist" else "it exists"
+            fxn
+            !exist ? <p>does not exist</p> : <p>It exist</p>
+
+
+            {item.borders && (
+                <div>
+                  {item.borders.map((border, index) =>
+                    <p key={index}>{border}</p>
+                  )}
+                </div>
+
+                {item.borders} ? <div>
+                    {item.borders.map((border, index) =>
+                      <p key={index}>{border}</p>
+                    )}
+                  </div> : <div><p>does not exist</p></div>
