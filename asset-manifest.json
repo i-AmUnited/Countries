@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/i-AmUnited/Countries/static/css/main.ac2c7719.css",
+    "main.js": "/i-AmUnited/Countries/static/js/main.f346ba12.js",
+    "static/js/787.862c3719.chunk.js": "/i-AmUnited/Countries/static/js/787.862c3719.chunk.js",
+    "index.html": "/i-AmUnited/Countries/index.html",
+    "main.ac2c7719.css.map": "/i-AmUnited/Countries/static/css/main.ac2c7719.css.map",
+    "main.f346ba12.js.map": "/i-AmUnited/Countries/static/js/main.f346ba12.js.map",
+    "787.862c3719.chunk.js.map": "/i-AmUnited/Countries/static/js/787.862c3719.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac2c7719.css",
+    "static/js/main.f346ba12.js"
+  ]
+}
