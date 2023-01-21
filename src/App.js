@@ -6,9 +6,9 @@ import SingleCountry from "./singleCountry";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<PageLayout />}></Route>
+        <Route exact path="/" element={<PageLayout />}></Route>
         <Route path="/:name" element={<SingleCountry />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
