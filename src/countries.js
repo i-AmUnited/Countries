@@ -64,9 +64,9 @@ const Countries = () => {
   }
  
     return ( 
-      <div> 
+      <div className='dark:bg-slate-900 dark:text-slate-300'> 
         <div className="px-8 pt-10 items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-            <div className="drop-shadow-sm">
+            <div className="">
               <form onSubmit={handleSearchCountry} autoComplete="off">
                 <label className="relative block">
                 <span className="sr-only">Search</span>
@@ -75,13 +75,13 @@ const Countries = () => {
                 <path fill="none" d="M0 0h24v24H0z"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"/>
                 </svg>
                 </span>
-                <input className="text-xs placeholder:text-slate-400 block bg-white w-full border border-indigo-50 rounded-md py-4 pl-9 pr-3 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for a country..." type="text" name="search" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
+                <input className="text-xs placeholder:text-slate-400 block bg-white dark:bg-slate-800 w-full border border-indigo-50 dark:border-slate-700 rounded-md py-4 pl-9 pr-3 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for a country..." type="text" name="search" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
                 </label>
               </form>
             </div>
-            <div className="drop-shadow-sm">
+            <div className="">
               <form onSubmit={handleFilterByRegion} className=" flex justify-end">
-              <select className='text-sm bg-white w-full md:w-1/3 lg:w-1/3 border border-indigo-50 rounded-md py-4 px-5 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1' value={regions.name} onChange={e => filterByRegion(e.target.value)}>
+              <select className='text-sm bg-white dark:bg-slate-800 w-full md:w-1/3 lg:w-1/3 border border-indigo-50 dark:border-slate-700 rounded-md py-4 px-5 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1' value={regions.name} onChange={e => filterByRegion(e.target.value)}>
                 {regions.map((region, index) => (
                   <option key={index} value={region.name}>{region.name}</option>
                 ))}
@@ -99,7 +99,7 @@ const Countries = () => {
         return (
         <Link to={`/${country.name}`}>
           <article key={country.flag}>
-          <div className="rounded-md bg-white px-1 pt-1 border border-grey-200">
+          <div className="rounded-md bg-white dark:bg-slate-800 px-1 pt-1 border border-grey-200 dark:border-0">
             <img src={country.flag} alt="" className="w-full h-48 object-cover rounded-md drop-shadow" />
             <div className="py-4 px-2">
                 <p className="mb-3 font-bold text-lg">{country.name}</p>

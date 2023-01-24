@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Back from "./backbtn";
 
 const SingleCountry = () => {
 
@@ -21,12 +22,12 @@ const SingleCountry = () => {
     }, [name])
 
     return ( 
-       <div className="grid place-items-center h-screen">
+       <div className="grid place-items-center h-screen dark:bg-slate-900 dark:text-slate-300">
         {country.map((item) => (
           <div key={item.flag} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-10 p-8 items-end">
             <div>
-            <Link to="/" className="border bg-white px-4 py-2 rounded-md">&larr;</Link>
-              <img src={item.flags.svg} alt="" className="mt-8 w-full h-[350px] object-cover rounded-md drop-shadow" />
+              <Back />
+              <img src={item.flags.svg} alt="" className="mt-8 w-full h-[350px] object-cover rounded-md border" />
             </div>
             <div>
               <p className="font-medium text-xl mb-2">{item.name}</p>
